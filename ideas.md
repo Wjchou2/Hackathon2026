@@ -34,14 +34,18 @@ The original board grouped ideas into tiers and also noted `* = big project` and
 - Video game (*)
   - Design a video game related to the scriptures
 - Digital museum (S) (*)
-  - Create a digital collection of displays
+  - Create a digital collection of displays related to the scripture. 
 - 3D model of civilization (S) (*)
+  - Model of the civilization in the scripture times.
 - Social media trend post
+  - Write or record social trend with contents related to the scriptures.
 
 ## B Tier
 
-- Play script (S)
+- Play script (S) (*)
+  - Write a script of a play of the entire scripture collection.
 - A sermon that Father Whitney would say (S) (*)
+  - Write a model sermon like the ones delivered by Father Whitney
 - Day in a life
 - Jeopardy
 - Picture book (S) (*)
