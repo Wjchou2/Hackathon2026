@@ -19,6 +19,7 @@ yarn-error.log*
 pnpm-debug.log*
 
 # SQLite / local data (better-sqlite3, dev DBs)
+data/
 *.db
 *.sqlite
 *.sqlite3
