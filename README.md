@@ -12,7 +12,7 @@ MVP web app for remixing religion-class reading assignments into more engaging s
 ## Features
 
 - Teacher flow:
-  - paste a lesson title and assignment text
+  - paste a lesson title and assignment text, or upload a `.txt`, `.md`, `.pdf`, or `.docx` file
   - generate remix options grounded in `ideas.md`
   - approve or hide options
   - save the assignment locally

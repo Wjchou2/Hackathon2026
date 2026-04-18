@@ -1,14 +1,20 @@
 import express from "express";
 import cors from "cors";
+import multer from "multer";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createAssignment, getAssignmentById, getRemixById, listAssignments, updateRemixImage } from "./db.js";
 import { generateAssignmentRemixes, generateRemixImage } from "./ai.js";
+import { buildAssignmentTitleFromFileName, parseAssignmentDocument } from "./document.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
 const port = Number(process.env.PORT || 3001);
+const upload = multer({
+  storage: multer.memoryStorage(),
+  limits: { fileSize: 10 * 1024 * 1024 }
+});
 
 app.use(cors());
 app.use(express.json({ limit: "2mb" }));
@@ -33,6 +39,40 @@ app.get("/api/assignments/:id", (req, res) => {
   }
 
   res.json(assignment);
+});
+
+app.post("/api/assignments/source-document", (req, res, next) => {
+  upload.single("document")(req, res, (error) => {
+    if (error instanceof multer.MulterError && error.code === "LIMIT_FILE_SIZE") {
+      res.status(400).send("The document is too large. Upload a file smaller than 10 MB.");
+      return;
+    }
+
+    if (error) {
+      next(error);
+      return;
+    }
+
+    void (async () => {
+      try {
+        if (!req.file) {
+          res.status(400).send("Upload a document file.");
+          return;
+        }
+
+        const parsed = await parseAssignmentDocument(req.file);
+        res.json({
+          fileName: parsed.fileName,
+          sourceText: parsed.sourceText,
+          suggestedTitle: buildAssignmentTitleFromFileName(parsed.fileName)
+        });
+      } catch (routeError) {
+        const message =
+          routeError instanceof Error ? routeError.message : "Failed to read the uploaded document.";
+        res.status(400).send(message);
+      }
+    })();
+  });
 });
 
 app.post("/api/assignments/generate", async (req, res) => {

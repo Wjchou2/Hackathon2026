@@ -86,6 +86,7 @@ export async function generateAssignmentRemixes(input: {
                 "- Prefer ideas from S, A, or B tiers when they fit.",
                 "- Avoid options that require unusual supplies unless the source strongly suggests it.",
                 "- Make every studentPrompt specific, concrete, and classroom-ready.",
+                "- Set approved to false for every remix so teachers must opt in.",
                 "- Do not include markdown code fences."
               ].join("\n")
             }
@@ -205,7 +206,7 @@ function normalizeRemix(
     effort,
     tier: idea.tier,
     materials,
-    approved: typeof remix.approved === "boolean" ? remix.approved : true
+    approved: false
   };
 }
 
@@ -247,7 +248,7 @@ function buildFallbackRemix(
     effort,
     tier: idea.tier,
     materials: inferMaterials(idea.label, effort, index),
-    approved: index < 4
+    approved: false
   };
 }
 
