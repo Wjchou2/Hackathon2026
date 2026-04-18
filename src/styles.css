@@ -1,0 +1,481 @@
+:root {
+  font-family: "Manrope", sans-serif;
+  color: #f8f4ec;
+  background:
+    radial-gradient(circle at top left, rgba(246, 183, 94, 0.2), transparent 28%),
+    radial-gradient(circle at right 15%, rgba(233, 92, 65, 0.16), transparent 30%),
+    linear-gradient(180deg, #1a1714 0%, #0f0d0b 100%);
+  color-scheme: dark;
+  --panel: rgba(29, 24, 20, 0.86);
+  --panel-strong: rgba(37, 29, 23, 0.96);
+  --border: rgba(255, 232, 204, 0.12);
+  --muted: #c8baaa;
+  --accent: #ffb260;
+  --accent-strong: #f26f4c;
+  --success: #99e2b4;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.ambient {
+  position: fixed;
+  width: 34rem;
+  height: 34rem;
+  border-radius: 999px;
+  filter: blur(80px);
+  pointer-events: none;
+  opacity: 0.52;
+}
+
+.ambient-left {
+  top: -8rem;
+  left: -8rem;
+  background: rgba(255, 164, 93, 0.18);
+}
+
+.ambient-right {
+  right: -10rem;
+  bottom: -10rem;
+  background: rgba(235, 103, 74, 0.16);
+}
+
+.hero-panel,
+.panel {
+  position: relative;
+  z-index: 1;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.hero-panel {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: flex-start;
+  width: min(1240px, 100%);
+  margin: 0 auto 1.5rem;
+  padding: 1.5rem;
+  border-radius: 28px;
+}
+
+.eyebrow,
+.section-kicker,
+.detail-label,
+.assignment-meta,
+.remix-tier {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+}
+
+h1 {
+  max-width: 11ch;
+  font-size: clamp(2.9rem, 7vw, 5.8rem);
+  line-height: 0.94;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.hero-copy {
+  max-width: 46rem;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.role-toggle {
+  display: inline-flex;
+  gap: 0.5rem;
+  padding: 0.4rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.role-pill,
+.secondary-button,
+.primary-button,
+.list-card {
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.role-pill {
+  border: 1px solid transparent;
+  padding: 0.8rem 1.15rem;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+}
+
+.role-pill.active {
+  border-color: rgba(255, 209, 155, 0.16);
+  background: linear-gradient(135deg, rgba(255, 178, 96, 0.24), rgba(242, 111, 76, 0.18));
+  color: #fff6ec;
+}
+
+.main-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) minmax(0, 1fr);
+  gap: 1.5rem;
+  width: min(1240px, 100%);
+  margin: 0 auto;
+}
+
+.panel {
+  border-radius: 28px;
+  padding: 1.4rem;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.panel-narrow {
+  align-self: start;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.chip,
+.goal-pill,
+.material-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 999px;
+  padding: 0.42rem 0.78rem;
+  font-size: 0.8rem;
+}
+
+.chip {
+  color: #fff6ec;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.chip.subtle,
+.goal-pill,
+.material-pill {
+  color: #f8ddbe;
+  background: rgba(255, 178, 96, 0.1);
+  border: 1px solid rgba(255, 178, 96, 0.18);
+}
+
+.stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.field span {
+  color: #fbefe0;
+  font-weight: 600;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.95rem 1rem;
+  color: #fffaf4;
+  outline: none;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: rgba(255, 178, 96, 0.6);
+  box-shadow: 0 0 0 4px rgba(255, 178, 96, 0.08);
+}
+
+.primary-button,
+.secondary-button {
+  border: 1px solid transparent;
+  border-radius: 18px;
+  padding: 0.9rem 1.1rem;
+  font-weight: 700;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: #1c120d;
+}
+
+.secondary-button {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff2e0;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.role-pill:hover,
+.list-card:hover {
+  transform: translateY(-1px);
+}
+
+.primary-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.summary-card,
+.remix-review-card,
+.assignment-card,
+.student-card,
+.list-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  background: var(--panel-strong);
+}
+
+.summary-card,
+.remix-review-card,
+.assignment-card,
+.student-card {
+  padding: 1rem;
+}
+
+.summary-card {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.goal-list,
+.materials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.remix-review-card {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.remix-review-head,
+.student-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.checkbox-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border-radius: 999px;
+  padding: 0.55rem 0.8rem;
+  background: rgba(153, 226, 180, 0.08);
+  color: #eefcf2;
+}
+
+.checkbox-pill input {
+  accent-color: var(--success);
+}
+
+.pitch {
+  font-size: 1.04rem;
+  color: #fff7ed;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.student-prompt-preview {
+  color: #f5e5d4;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  padding: 0.85rem 0.95rem;
+}
+
+.assignment-grid,
+.student-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.assignment-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.student-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.list-card {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  background: var(--panel-strong);
+}
+
+.list-card.active {
+  border-color: rgba(255, 178, 96, 0.46);
+  background: linear-gradient(180deg, rgba(255, 178, 96, 0.12), rgba(255, 255, 255, 0.03));
+}
+
+.student-card {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.student-card.expanded {
+  grid-column: span 2;
+}
+
+.expanded-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.image-frame {
+  overflow: hidden;
+  border-radius: 20px;
+  min-height: 250px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(145deg, rgba(255, 178, 96, 0.12), rgba(242, 111, 76, 0.18));
+}
+
+.image-frame img,
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.image-frame img {
+  object-fit: cover;
+}
+
+.image-placeholder {
+  display: grid;
+  place-items: center;
+  min-height: 250px;
+  color: #ffe9cb;
+}
+
+.banner {
+  position: relative;
+  z-index: 1;
+  width: min(1240px, 100%);
+  margin: 0 auto 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 18px;
+}
+
+.banner.error {
+  color: #ffd9d1;
+  background: rgba(191, 71, 50, 0.18);
+  border: 1px solid rgba(242, 111, 76, 0.36);
+}
+
+.empty-state {
+  border: 1px dashed rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+  padding: 1.2rem;
+  color: var(--muted);
+}
+
+@media (max-width: 1024px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-card.expanded {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    padding: 1rem;
+  }
+
+  .hero-panel,
+  .panel {
+    border-radius: 24px;
+  }
+
+  .hero-panel {
+    flex-direction: column;
+  }
+
+  .expanded-panel {
+    grid-template-columns: 1fr;
+  }
+}
