@@ -47,21 +47,30 @@ The original board grouped ideas into tiers and also noted `* = big project` and
 - A sermon that Father Whitney would say (S) (*)
   - Write a model sermon like the ones delivered by Father Whitney
 - Day in a life
+  - Write a description of a day in the life of a bible character.
 - Jeopardy
+  - Complete a Jeopardy round about the scripture in class.
 - Picture book (S) (*)
+  - Complete a picture book about the scripture.
 - Bookmark (S) (*)
+  - Complete a bookmark summary entry for each reading.
 - Jesus in modern times (S)
+  - Represent in a form of media who would Jesus be if he was born in the modern world.
 - Merch
+  - Design merch based on the religion topic.
 - Family Feud
+  - complete a family feud in class.
 - Each person gets a role in a simulation with different scenarios (S)
+  - Each person is assigned with a different character from the scripture and reflect on what they do in certain scenarios.
 - Board game (*)
+  - Design a board game related to the religion topics like the scriptures.
 - Choose-your-own-adventure (*)
+  - Design a choose-your-own-adventure story related to the scriptures.
 - "Tug of war" debate
+  - Debate but there is a tracker of progress and if a side gives a point the teacher think is good the tracker is moved to that team's favor.
 - Character cards
-- Mystery box challenge with artifacts or clues
+  - Characterize biblical characters in a collector's card style.
 - Escape room (S)
-- Answer a question, then throw a basketball
-- "What if?" reality simulation / redesign world outcome
+  - Puzzles of questions related to the scripture. When solved it gives a clue to help the students open the locks.
 - Shark Tank pitch
-- Ping-pong explain-it game where a mistake loses a point
-- Scavenger hunt
+  - Pitch a idea related to the scriptures.
