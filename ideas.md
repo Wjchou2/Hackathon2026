@@ -13,9 +13,6 @@ The original board grouped ideas into tiers and also noted `* = big project` and
 - Rap battle / lip sync (*)
 - Act it out (S)
 - Debate documentary (S) (*)
-
-## A Tier
-
 - Debate (S)
 - Product design
 - Write a Bible verse (S)
@@ -23,9 +20,6 @@ The original board grouped ideas into tiers and also noted `* = big project` and
 - Digital museum (S) (*)
 - 3D model of civilization (S) (*)
 - Social media trend post
-
-## B Tier
-
 - Play script (S)
 - A sermon that Father Whitney would say (S) (*)
 - Day in a life
@@ -33,9 +27,6 @@ The original board grouped ideas into tiers and also noted `* = big project` and
 - Picture book (S) (*)
 - Bookmark (S) (*)
 - Jesus in modern times (S)
-
-## C Tier
-
 - Merch
 - Family Feud
 - Each person gets a role in a simulation with different scenarios (S)
@@ -43,9 +34,6 @@ The original board grouped ideas into tiers and also noted `* = big project` and
 - Choose-your-own-adventure (*)
 - "Tug of war" debate
 - Character cards
-
-## D Tier
-
 - Mystery box challenge with artifacts or clues
 - Escape room (S)
 - Answer a question, then throw a basketball
