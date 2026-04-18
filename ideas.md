@@ -6,21 +6,35 @@ The original board grouped ideas into tiers and also noted `* = big project` and
 
 ## S Tier
 
-- Song performance / poetry (S) (*)
+- Song performance (S) (*)
+  - Write and perform a song for the class related to the scripture. Can be a cover of another song.
+- poetry (S) (*)
+  - Write a poem of any type about the scripture. Genuine effort is expected.
 - Poster (S)
+  - Make a poster about the scripture combining takeaways and artistic direction.
 - Visual map
+  - Mind map about the scripture. Enough points for the student to fully understand the concept.
 - Writing: essay or story (S) (*)
+  - Write essay or story related to the prompts provided.
 - Rap battle / lip sync (*)
+  - Have a rap battle between two opposing sides performed or recorded.
 - Act it out (S)
-- Debate documentary (S) (*)
+  - Act out the content of the scriptures in class.
+- Documentary (S) (*)
+  - Produce a documentary about the scripture.
 
 ## A Tier
 
 - Debate (S)
+  - Have 2 sides debate on a certain aspect of the scriptures.
 - Product design
+  - Design a product related to the scriptures.
 - Write a Bible verse (S)
+  - Write a bible verse according to style of the scripture.
 - Video game (*)
+  - Design a video game related to the scriptures
 - Digital museum (S) (*)
+  - Create a digital collection of displays
 - 3D model of civilization (S) (*)
 - Social media trend post
 
