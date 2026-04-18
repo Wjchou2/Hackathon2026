@@ -179,7 +179,6 @@ function App() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [isUploadingDocument, setIsUploadingDocument] = useState(false);
-  const [uploadedDocumentName, setUploadedDocumentName] = useState<string | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [expandedRemixId, setExpandedRemixId] = useState<number | null>(null);
   const [imageLoadingId, setImageLoadingId] = useState<number | null>(null);
@@ -299,7 +298,6 @@ function App() {
         title: current.title.trim() ? current.title : payload.suggestedTitle,
         sourceText: payload.sourceText
       }));
-      setUploadedDocumentName(payload.fileName);
     } catch (error) {
       setLoadError(error instanceof Error ? error.message : "Failed to upload document.");
     } finally {
@@ -333,7 +331,6 @@ function App() {
       const saved = (await res.json()) as AssignmentDetail;
       setGenerated(null);
       setDraft(defaultAssignment);
-      setUploadedDocumentName(null);
       setRole("student");
       setSelectedStudentAssignmentId(saved.id);
       await refreshAssignments();
@@ -475,9 +472,6 @@ function App() {
                   <p className="section-kicker">Teacher Flow</p>
                   <h2>Create an assignment</h2>
                 </div>
-                <span className="chip">
-                  {uploadedDocumentName ? `Loaded: ${uploadedDocumentName}` : "Upload or paste"}
-                </span>
               </div>
 
               <form className="stack" onSubmit={handleGenerate}>
